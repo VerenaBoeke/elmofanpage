@@ -4,8 +4,8 @@ from models import User, db
 app = Flask(__name__)
 db.create_all()  #  0) DATENBANKTABELLEN WERDEN ERSCHAFFEN <=> CREATE
 
-@app.route("/", methods=["GET", "POST"])#CONTROLLER
-def about():
+@app.route( "/", methods=["GET", "POST"])
+def index():
     if request.method == "GET":
         return render_template("index.html")
     elif request.method == "POST":
@@ -30,11 +30,11 @@ def about():
 
         return response
 
-@app.route("/impressum.html")#CONTROLLER
+@app.route("/impressum.html")
 def impressum():
     return render_template("impressum.html", address = "Elmo the Red Monster, Sesamestreet 4, 12345 Monstertown")
 
-@app.route("/success.html")#CONTROLLER
+@app.route("/success.html")
 def success():
     return render_template("success.html", address = "Elmo the Red Monster, Sesamestreet 4, 12345 Monstertown")
 
