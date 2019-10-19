@@ -7,14 +7,26 @@
       <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
         <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
           <li class="nav-item">
+            <a class="nav-link" href="/">Home</a>
+          </li>
+          <li class="nav-item">
             <a class="nav-link" href="#aboutElmo">Über Elmo</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#elmoLoves">Dinge die Elmo liebt</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/impressum.html">Impressum</a>
-          </li>
+            {% if user and user != None %}
+          <li class="nav-item right">
+                <a class="nav-link" href="/profile">[ Zum Profil von {{ user.username }} ]</a>
+            </li>
+            <li class="nav-item right">
+              <a class="nav-link" href="/logout">[ Logout ]</a>
+            </li>
+            {% else %}
+            <li class="nav-item right">
+                <a class="nav-link" href="/login">Login</a>
+            </li>
+            {% endif %}
         </ul>
       </div>
     </nav>

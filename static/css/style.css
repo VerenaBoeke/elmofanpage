@@ -237,6 +237,14 @@ button .collapse {
     text-decoration: none;
 }
 
+.profil-form {
+    position: static;
+}
+
+.error {
+    color: #B20F0F;
+}
+
 @media screen and (max-width: 999px) {
 
     h1 {
@@ -269,6 +277,10 @@ button .collapse {
 
     .navbar-nav {
         margin-left: 10px;
+    }
+
+    .nav-item.right {
+        float: right;
     }
 
 }
