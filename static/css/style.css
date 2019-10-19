@@ -245,6 +245,19 @@ button .collapse {
     color: #B20F0F;
 }
 
+.secondary-button {
+    color: #BA0100;
+    text-decoration: underline;
+    padding-left: 5px;
+}
+
+
+.secondary-button:hover {
+    color: #BA0100;
+    text-decoration: underline;
+    padding-left: 5px;
+}
+
 @media screen and (max-width: 999px) {
 
     h1 {
