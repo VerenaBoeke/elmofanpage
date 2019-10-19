@@ -116,10 +116,7 @@ def login():
         # hash the password
         hashed_password = hashlib.sha256(password.encode()).hexdigest()
 
-        try:
-            user = db.query(User).filter_by(username=username, password=hashed_password).first()
-        except Exception as error:
-            print("ERROR:", error)
+        user = db.query(User).filter_by(username=username, password=hashed_password).first()
 
         if user == None:
             response = make_response(redirect(url_for('loginfailed')))
